@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>AI | TSP</title>
+
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+
+    <!-- font awesome css -->
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+
+    <!-- my css -->
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body id="ccc">
+
+    <h1 class="text-center p-2 heading">
+        Travelling Salesman Problem
+    </h1>
+
+    <div class="alert alert-success text-center position-absolute w-50 d-none" id="waitingMsg">
+        Please Wait For <span id="secondsLeft">10</span> Seconds <a href="#" id="stopLink" class="alert-link text-danger">STOP</a>
+    </div>
+
+    <div class="graph container rounded p-5 mt-3 text-center position-relative shadow bg-aliceblue border">
+        <div id="nodesContainer" class="position-relative p-0 w-auto h-auto">
+            <canvas id="myCanvas"></canvas>
+        </div>
+
+        <div class="myForm row justify-content-around p-2 m-2">
+            <div class="col-3">
+                <input class="form-control" id="input" type="text" placeholder="Enter number of nodes" onkeyup="getInput()">
+            </div>
+
+            <div class="col-4">
+                <button class="btn btn-success" id="measureCostBtn">Measure Cost</button>
+                <button class="btn btn-outline-info" id="solveBtn">Solve <i class="fa fa-tasks"></i></button>
+                <button class="btn btn-outline-dark" id="resetBtn" title="Reset"><i class="fa fa-refresh"></i></button>
+            </div>
+
+            <button class="btn btn-transparent text-danger" data-toggle="tooltip" data-placement="left" title="Clear" style="position: absolute; right: 10px; top: 10px;" id="clearBtn"><i class="fa fa-remove fa-2x"></i></button>
+        </div>
+    </div>
+
+    <button class="btn btn-dark" id="theme-btn">
+        <i class="fa fa-moon-o font-weight-bold" aria-hidden="true"></i>
+        <i class="fa fa-sun-o d-none text-light font-weight-bold" aria-hidden="true"></i>
+    </button>
+
+    <!-- JQuery -->
+    <script src="js/bootstrap/jquery.slim.min.js">
+    </script>
+    <!-- Popper -->
+    <script src="js/bootstrap/popper.min.js">
+    </script>
+    <!-- Bootstrap.js -->
+    <script src="js/bootstrap/bootstrap.min.js">
+    </script>
+    <!-- My js -->
+    <script src="js/models/Path.js"></script>
+    <script src="js/models/Node.js"></script>
+    <script src="js/models/Edge.js"></script>
+    <script src="js/models/Graph.js"></script>
+    <script src="js/helperFunctions.js"></script>
+    <script src="js/superGlobals.js"></script>
+    <script src="js/test1.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
